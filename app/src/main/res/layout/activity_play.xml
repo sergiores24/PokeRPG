@@ -22,15 +22,10 @@
             android:layout_width="match_parent"
             android:layout_height="185dp">
 
-            <com.android.volley.toolbox.NetworkImageView
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:id="@+id/pk2"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
             <TextView
                 android:text="TextView"
+                android:gravity="right"
+                android:textSize="25sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -38,21 +33,33 @@
                 android:layout_alignParentEnd="true"
                 android:layout_below="@+id/pk2"
                 android:layout_alignParentBottom="true" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:id="@+id/pk2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textView4"
+                android:layout_toStartOf="@+id/pk2"
+                android:layout_above="@+id/textView2" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="185dp">
 
-            <com.android.volley.toolbox.NetworkImageView
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:id="@+id/pk1"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
             <TextView
                 android:text="TextView"
+                android:textSize="25sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -60,6 +67,24 @@
                 android:layout_alignParentEnd="true"
                 android:layout_below="@+id/pk1"
                 android:layout_alignParentBottom="true" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:id="@+id/pk1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="37dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/textView3"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/textView1"
+                android:layout_toEndOf="@+id/pk1" />
         </RelativeLayout>
     </LinearLayout>
 
