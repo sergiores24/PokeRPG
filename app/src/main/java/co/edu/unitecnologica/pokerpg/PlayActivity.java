@@ -24,6 +24,9 @@ public class PlayActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        NetworkImageView img1, img2;
+        img1 = (NetworkImageView) findViewById(R.id.pk1);
+        img2 = (NetworkImageView) findViewById(R.id.pk2);
         RequestQueue queue = Volley.newRequestQueue(this);
         int pokemon1, pokemon2;
         Random rand = new Random();
