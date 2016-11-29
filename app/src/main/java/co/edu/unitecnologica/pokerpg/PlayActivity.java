@@ -31,10 +31,9 @@ public class PlayActivity extends AppCompatActivity {
     NetworkImageView img1, img2;
     TextView tx1,tx2,vd1,vd2;
     Button attack;
-    Boolean rd1=false,rd2=false, turno=false;
+    Boolean rd1=false,rd2=false;
     int vida1=100,vida2=100;
     Random rand = new Random();
-    String urlimg1="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/", urlimg2="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
     public final String url = "http://pokeapi.co/api/v2/pokemon/";
 
     @Override
@@ -71,7 +70,6 @@ public class PlayActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.d("Error.Response", "lala");
                     }
                 });
         JsonObjectRequest getRequest2 = new JsonObjectRequest(Request.Method.GET, url + String.valueOf(pokemon2)+"/", null,
@@ -91,7 +89,6 @@ public class PlayActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.d("Error.Response", "lala");
                     }
                 });
         attack.setEnabled(false);
@@ -103,7 +100,6 @@ public class PlayActivity extends AppCompatActivity {
                 if(vida2<=0){
                     vd2.setText("Perdedor");
                     vd1.setText("Ganador");
-                    Log.d("aqui: ","gana el primero");
                     final Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -117,7 +113,6 @@ public class PlayActivity extends AppCompatActivity {
                         }
                     }, 2500);
                 } else {
-                    Log.d("Aqui","toy");
                     vd2.setText("Vida: "+String.valueOf(vida2));
                     turnoMaquina();}
             }
@@ -148,7 +143,6 @@ public class PlayActivity extends AppCompatActivity {
         if(vida1<=0){
             vd1.setText("Perdedor");
             vd2.setText("Ganador");
-            Log.d("aqui","gana el segundo");
             Intent principal = new Intent();
             principal.setClass(getApplicationContext(), MainActivity.class);
             principal.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
